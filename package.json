@@ -12,7 +12,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -33,9 +34,11 @@
     ]
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.49.1",
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.2",
-    "typescript": "^3.2.1",
-    "react-scripts": "^4.0.0"
+    "@types/react": "^19.0.2",
+    "react-scripts": "^4.0.0",
+    "typescript": "^3.2.1"
   }
 }
