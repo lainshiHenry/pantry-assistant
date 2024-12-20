@@ -3,8 +3,23 @@ import { test, expect } from "@playwright/experimental-ct-react";
 import Button from "../src/components/Button";
 import React from "react";
 
-test('has title', async ({ mount }) => {
-  const component = await mount(<Button></Button>);
+test.describe('Button Component Tests', () => {
 
-  await expect(component).toBeVisible();
+  test.beforeEach(() => {
+    console.log(`Running "${test.info().title}" test`);
+  })
+
+  test('Button is Visible', async ({ mount }) => {
+    const component = await mount(<Button />);
+
+    await expect(component).toBeVisible();
+  });
+
+  test('Button is focusable', async ({ mount, page }) => {
+    const component = await mount(<Button />);
+
+    await page.keyboard.press('Tab');
+
+    await expect(component).toBeFocused();
+  });
 });
