@@ -9,9 +9,9 @@
     "react-scripts": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "playwright test -c playwright-ct.config.ts",
     "eject": "react-scripts eject",
     "test-ct": "playwright test -c playwright-ct.config.ts"
   },
