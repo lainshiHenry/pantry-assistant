@@ -1,12 +1,17 @@
 import React from 'react'
 
 export interface LinkInterface {
-    destinationHref?: string
+    destinationHref?: string;
+    classNameString?: string;
+    linkTextString: string;
 }
 
-const Link = ({ destinationHref = "#" }: LinkInterface) => {
+const Link = ({ destinationHref = "#", classNameString = undefined, linkTextString }: LinkInterface) => {
     return (
-        <a href={destinationHref}>Link</a>
+        <a
+            href={destinationHref}
+            className={classNameString}
+        >{linkTextString}</a>
     )
 }
 

@@ -18,9 +18,10 @@ function App() {
         >
           Learn React
         </a>
+
+        <Link linkTextString='Sample link here' classNameString='App-link' />
+        <Button />
       </header>
-      <Link />
-      <Button />
     </div>
   );
 }
